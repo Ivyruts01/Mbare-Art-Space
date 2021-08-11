@@ -1,0 +1,554 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+//fonts
+
+$bold:'Montserrat3';
+$normal:'Montserrat5';
+$light:'Montserrat6';
+
+//banner..................................................
+.banner{margin: 30px 5%;background-image: url(img/banner.png);height: 80vh;background-position: center center;background-repeat: no-repeat;background-size: cover;border-radius:8px;
+    .overlay{position: absolute;background-color:black;width:90%;height:80%;opacity:0.6;z-index: 2;border-radius:8px;}
+    .text{z-index: 5;top:46%;left:-4%;position: absolute;display:flex;justify-content: center;flex-direction: column;color: white;align-items: center; padding: 0 13%;
+    h1{font-size: 20px;padding-bottom: 10px;font-family: $bold;}
+    p{font-size: 16px;white-space: pre-line;text-align: center;line-height: 1.2;font-family: $normal;position: relative;}
+	&::after{content: "";width: 3px;height: 54px;background-color: white;position: absolute;top: 116%;}
+    }
+}
+
+// cards.....................................................
+.cards{ padding: 20px;text-align:center;
+    h3{font-size: 20px;text-align: center;padding: 15px;font-family: $bold;}
+	p{font-size: 18px;padding-bottom: 10px;font-family: $normal;}
+    .card{ text-align: center; margin-bottom: 20px;border:none;
+		.card-img-top{width: 30%;margin: 0 auto;}
+      h4{margin: 20px 0;font-size: 20px;white-space: pre-line;line-height: 1.2;font-family: $bold;}
+      p{font-size: 18px;line-height: 1.2;font-family: $normal;}
+       }
+  }
+
+  //about..................................................
+  .about{background-image: url(img/banner1.png);height: 50vh;width: 100%;background-position: center center;background-size: cover;
+	  .text{text-align: center;padding-top: 84px;
+	h3{padding: 10px;font-size: 18px;font-family: $bold;}
+	p{font-size: 18px;padding-bottom: 10px;font-family: $normal;}
+	button{background-color: #7F8D5E;padding: 15px;border:none;border-radius:4px;
+		a{font-size: 15px;color: white;font-family: $normal;}
+	}
+	}
+	.pics{padding: 5%;
+	.inner-pic{display: none;}
+	}
+  }
+
+
+//   gallery..............................................
+.gallery{padding: 5%;margin-top: 142%;
+	.inner{display: none;}
+	.para{text-align: center;font-size: 18px;font-family: $bold;padding-bottom: 20px;}
+
+}
+
+// Artist............................................
+.Artist{text-align: center;
+	h3{padding: 10px;font-size: 18px;font-family: $bold;text-align: center;padding: 5%;}
+	p{font-size: 18px;padding-bottom: 10px;font-family: $normal;text-align: center;padding: 5%;}
+	button{background-color: #7F8D5E;padding: 15px;padding: 10px;margin:10px;border:none;border-radius:4px;
+		a{color: white;font-size: 16px;}
+	}
+	.card-1{margin-bottom: 20px;background-color:#FCF6E2;padding:5%;border:none;border-radius:8px;
+		.card-img-top{ box-shadow: 0px -4px 0px 0px #feb143;border-radius: 4px;position: relative;}
+		.icon-img-top{width: 30px;position: absolute;top: 36%;left: 9%;}
+		h4{margin: 10px 0;font-size: 16px;white-space: pre-line;line-height: 1.2;text-align:left;font-family: $normal;font-weight: 600;}
+		p{font-size: 18px;line-height: 1.2;text-align: left;font-family: $light;padding: 10px 0;}
+		.card-img-top2{ box-shadow: 0px -4px 0px 0px #FD6D4E;border-radius: 4px;}
+		.card-img-top3{ box-shadow: 0px -4px 0px 0px #7F8D5E;border-radius: 4px;}
+	}
+	.card-2{margin-bottom: 20px;padding:5%;border:none;border-radius:8px;background-color:#F9E7E1;
+		.card-img-top{ box-shadow: 0px -4px 0px 0px #feb143;border-radius: 4px;position: relative;}
+		.icon-img-top{width: 30px;position: absolute;top: 36%;left: 9%;}
+		h4{margin: 10px 0;font-size: 16px;white-space: pre-line;line-height: 1.2;text-align:left;font-family: $normal;font-weight: 600;}
+		p{font-size: 18px;line-height: 1.2;text-align: left;font-family: $light;padding: 10px 0;}
+		.card-img-top2{ box-shadow: 0px -4px 0px 0px #FD6D4E;border-radius: 4px;}
+		.card-img-top3{ box-shadow: 0px -4px 0px 0px #7F8D5E;border-radius: 4px;}
+	}
+
+	.card-3{margin-bottom: 20px;padding:5%;border:none;border-radius:8px;background-color:#ECF5EC;
+		.card-img-top{ box-shadow: 0px -4px 0px 0px #feb143;border-radius: 4px;position: relative;}
+		.icon-img-top{width: 30px;position: absolute;top: 36%;left: 9%;}
+		h4{margin: 10px 0;font-size: 16px;white-space: pre-line;line-height: 1.2;text-align:left;font-family: $normal;font-weight: 600;}
+		p{font-size: 18px;line-height: 1.2;text-align: left;font-family: $light;padding: 10px 0;}
+		.card-img-top2{ box-shadow: 0px -4px 0px 0px #FD6D4E;border-radius: 4px;}
+		.card-img-top3{ box-shadow: 0px -4px 0px 0px #7F8D5E;border-radius: 4px;}
+	}
+	
+}
+
+// donate.......................................
+.donate{text-align: center;padding: 5%;background-image:url(img/Banner3.png);height:50vh;background-position:center;background-size: cover;width:100%;
+	.inner-pic{
+		.pix{display: none;}
+		.pic{display:none;}
+		}
+	form{padding: 20px;background-color: #465229;border-radius:8px;
+		h3{font-size: 18px;color: white;font-family: $bold;text-align:center;}
+		p{font-size: 18px;line-height: 1.2;text-align: left;font-family: $light;padding-top: 10px;text-align:center;color:white;}
+		h4{font-size: 14px;color: white;font-family: $bold;text-align:center;position: relative;padding:10px;
+		&::before{content: "";width: 30px;height: 3px;background-color:#feb143 ;position: absolute;top: 42%;right: 93%;}
+		&::after{content: "";width: 30px;height: 3px;background-color:#feb143 ;position: absolute;top: 42%;left: 93%;}
+		}
+	.form-inner{
+	.inner-form{display: flex;
+		input{width: 30%;padding: 10px;margin: 10px;border-radius: 4px;border: none;
+		&::placeholder{color:#465229;font-size: 10px;font-family: $bold;}
+		
+		}
+		.seven{background-color:#E18400;
+			&::placeholder{	color:white;}
+		}
+		.other{width: 60%;}
+	}
+
+   
+	 }
+	 label{font-size: 15px;color: white;font-family: $light;}
+	button{background-color: #E18400;width:80%;padding: 10px;border: none;margin:15px;border-radius:4px;
+		a{color: white;font-family: $bold;font-size: 16px;}
+	}
+	}
+
+}
+// events....................................................
+.events{padding-top:176%;text-align: center;
+	.upcoming{
+		h2{font-size: 18px;color: #000000;font-family: $bold;text-align:center;}
+		p{font-size: 18px;line-height: 1.2;text-align: left;font-family: $light;padding-top: 10px;text-align:center;color:#000000;}
+	}
+	button{background-color: #7F8D5E;padding: 10px;border:none;border-radius:4px;margin:20px;
+		a{font-size: 15px;color: white;font-family: $normal;}
+	}
+	.card{background-color: #ECF5EC;border: none;margin-bottom: 20px;border-radius:8px;
+	.card-title{text-align: left;padding: 10px;font-size: 16px;font-family: $bold;}
+	.card-text{font-size: 14px;line-height: 1.2;text-align: left;font-family: $normal;white-space: pre-line;padding:0 10px;}
+	}
+}
+
+// footer.................................................
+.footer-top{background-color: #3A3A3A;padding:2%;margin: 5%;color: white;border-radius: 4px;
+	h2{font-size: 15px;color: white;font-family: $bold;}
+	p{font-size: 15px;line-height: 1.2;text-align: left;font-family: $light;padding-top: 10px;color:white;}
+	form{
+		input{padding: 15px;border:none;width: 100%;border-radius: 4px;position: relative;margin-top:20px;
+		&::placeholder{color:#3A3A3A ;font-family: $light;font-size: 16px;}
+		}
+		button{background-color: black;padding: 10px;border: none;border-radius:4px;position: absolute;left:60%;margin-top: 23px;
+			a{color: white;font-family: $normal;font-size: 16px;}
+		}
+	}
+}
+
+footer{
+	background-color: #000000;color:white;text-align: center;padding:5%;
+	.text-inner{
+		h3{font-size: 18px;font-family: $bold;}
+		p{font-size: 18px;line-height: 1.2;font-family: $light;padding-top: 10px;}
+	}
+	.follow{padding-top: 20px;
+		h4{font-size: 18px;font-family: $bold;}
+		ul{padding: 10px;
+			li{
+				a{text-decoration: none;color: white;font-size: 18px;line-height: 1.2;font-family: $light;padding: 10px;}
+			}
+		}
+	}
+
+	.location{
+		h4{font-size: 18px;font-family: $bold;}
+		p{font-size: 18px;line-height: 1.2;font-family: $light;padding-top: 10px;}
+	}
+}
+
+
+//Media Queries
+@media (min-width: 375px) { 
+	.banner{
+		.text{top: 55%;}
+
+	}
+	.gallery {margin-top: 125%;}
+	.events {padding-top: 145%;
+          p{padding: 2%;}
+	}
+	.footer-top {
+		form{
+			button {
+				left: 66%;
+	 
+	}}
+	}
+}
+@media (min-width: 414px) { 
+	.gallery{
+		.inner2{
+			.pixy{display: none;}
+			}
+	}
+}
+@media (min-width: 568px) { 
+	.banner{
+		.text{top: 55%;}
+	}
+.about {
+  height: 136vh;
+  .text{padding-top: 146px;}
+    .pics{
+		img{width: 100%;}
+	}
+}
+.gallery{
+	
+	.inner2{
+		img{width: 100%;}
+		}
+}
+.donate{height: 142vh;
+.inner-pic{
+	img{width: 100%;}
+}
+}
+.events {
+    padding-top: 110%;
+	.card{
+		.card-text {
+		
+			padding: 15px 10px;
+		}
+	}
+
+}
+.footer-top {
+	form{
+		button {
+			left: 74%;
+ 
+}}
+}
+}
+
+@media (min-width: 768px) {
+	.banner{
+		.text {top: 64%;
+			h1{font-size: 28px;}
+			p{font-size: 23px;padding-top: 10px;}
+		}
+	} 
+
+	.cards{
+		h3 {font-size: 30px;}
+		p{white-space: pre-line;line-height: 1.1;font-size: 25px;}
+		.card{padding-top: 30px;
+		p{font-size: 16px;}
+		}
+	} 
+	.about {padding: 5%;height: 70vh;display:flex;
+		.text {padding-top: 211px;text-align:left;
+			h3{font-size: 25px;}
+			p{font-size: 21px;line-height: 1.1;padding: 10px;}
+			button{margin: 10px;}
+		}
+		 .pics {display: flex;padding-top: 40%;
+			.inner-pic1{width: 47%;margin-right: 10px;
+			img{width: 100%;}
+			}
+			.inner-pic {margin-top: -6px;display: block;width: 63%;
+				img{margin-bottom: 15px;width: 50%;}
+				
+			}
+		 }
+	}
+	.gallery{margin-top: 6%;
+		.inner{display: block;display: flex;
+		.pic-1{width: 33%;height:28vh;margin-bottom: 15px;}
+		.pic-2{width: 33%;height: 27vh;margin-top: 20px;}
+		.pic-3{width: 33%;height: 30vh;}
+		img{margin: 5px;}
+		}
+		.inner2{display: flex;
+			.pixy{width: 33%;height:30vh;margin-bottom:10px;display:block;}
+			.picy{margin-top: 12px;
+				.pic-4{width: 95%;height: 20vh;}
+			}
+			
+			.pic-5{width: 33%;height: 27vh;margin-top: 14px;}
+			img{margin: 5px;}
+		}
+	}
+	.Artist {
+		h3 {font-size: 26px;}
+		p {font-size: 28px;line-height: 1.1;}
+		button{padding: 22px;margin-bottom:20px;
+			a {color: white;font-size: 16px;font-family: $bold;}
+		} 
+		.card-1 {
+			.icon-img-top {width: 30px;position: absolute;top: 25%;left: 9%;}
+		}
+		.card-2 {
+			.icon-img-top {width: 30px;position: absolute;top: 25%;left: 9%;}
+		}
+		.card-3 {
+			.icon-img-top {width: 30px;position: absolute;top: 23%;left: 9%;}
+		}
+	}
+
+	.donate{display: flex;height: 70vh;
+		.inner-pic{width: 58%;display:flex;padding-top: 21%;
+			.pix{display:block;margin: 5px;}
+			.picx{margin: 5px;}
+			.pic{display:block;margin: 5px;margin-top: 44px;}
+		
+		}
+		form{height: 400px;width: 400px;margin-top: 20%;margin-left: 10px;
+    h4::before {width: 47px;top: 42%;right: 87%;}
+			h4::after {width: 47px;top: 42%;left: 87%;}
+		} 
+	} 
+	.events {
+		padding-top: 10%;
+		.text{display: flex;justify-content:space-between;padding: 5%;
+		.upcoming{
+			h2{text-align: left;padding: 10px;}
+			p{text-align: left;white-space: pre-line;padding-bottom: 10px;}
+		}
+		button{
+			a{font-size: 18px;}
+		}
+		}
+	}
+	.footer-top{display: flex;justify-content:space-between;
+	.inner{text-align: left;width:40%
+		p{white-space: pre-line;}
+	}
+	form{width: 60%;
+		button {left: 80%;}
+	}
+	}
+	footer{display: flex;text-align: left;
+	.text-inner{width: 46%;
+		p{white-space:pre-line;}
+	}
+	.follow{padding-top: 0;
+		h4{	padding:0 18px;}
+	}
+	.location{
+		p{white-space: pre-line;}
+	}
+	}
+ }
+
+ @media (min-width: 992px) {
+	.header{
+		.menu{
+			.btn {width: 16%;}
+		} 
+	} 
+	.banner{height: 42vh;
+	.overlay{height: 42%;}
+	.text {top: 26%;
+		p{font-size: 28px;}
+	}
+	}
+	.cards {
+		.card{
+			p {font-size: 20px;}
+		}
+	}
+
+	.about{height: 58vh;
+		.text {padding-top: 258px;}
+		.pics {padding-top: 29%;
+			.inner-pic1 {width: 50%;margin-top: 36px;}
+			.inner-pic img {width: 76%;}
+		}
+	}
+	.gallery{
+		.inner{
+		.pic-1{height:26vh;}
+		}
+	}
+	.Artist{
+		.text{display: flex;justify-content:space-between;
+		h3{text-align: left;}
+		p{text-align: left;white-space: pre-line;margin-left:40px;padding: 10px;}
+		}
+		button{margin: 35px;}
+	}
+	.events {
+		padding-top: 5%;position: relative;bottom: 137px;
+	}
+	
+	.footer-top {padding: 5%;position: absolute;bottom: -290%;z-index: 9;left: 5%;}
+	.footer{position: relative;
+		.text-inner{width: 40%;padding-top: 34px;}
+		.follow{width: 30%;padding-top: 34px;}
+		.location{width: 30%;padding-top: 34px;}
+	}
+ 
+}
+
+@media (min-width: 1200px) {
+	.header{
+		.menu{
+			.btn {width: 13%;}
+		} 
+	} 
+	.banner{height: 80vh;
+		.overlay{height: 80%;}
+		.text {top: 65%;left:5%;
+			p{font-size: 20px;}
+		}
+		}
+		.cards {
+			.card{
+				p {font-size: 17px;white-space: pre-line;}
+			}
+		}
+
+		.about{height:150vh;width:90%;
+			.text {padding-top: 450px;width:50%;padding-left:80px;
+			h3{font-size: 20px;}
+			p{white-space: pre-line;font-size: 21px;}
+			}
+			.pics {padding-top: 29%;width:50%;
+				.inner-pic1 {width: 80%;margin-top: 36px;}
+				.inner-pic img {width: 100%;}
+			}
+		}
+		.Artist{
+			.text{display: flex;justify-content:space-between;padding:10px 10%;
+			h3{text-align: left;padding: 10px;}
+			p{text-align: left;white-space: pre-line;padding: 10px;margin-left: 0;}
+			}
+			button{margin: 35px;}
+			.card-1 {
+				.icon-img-top {width: 30px;position: absolute;top: 45%;left: 9%;}
+			}
+			.card-2 {
+				.icon-img-top {width: 30px;position: absolute;top: 45%;left: 9%;}
+			}
+			.card-3 {
+				.icon-img-top {width: 30px;position: absolute;top: 45%;left: 9%;}
+			}
+		}
+
+		.gallery{margin-top: 4%;
+			.inner{display: block;display: flex;
+			.pic-1{width: 33%;height:40vh;margin-bottom: 15px;}
+			.pic-2{width: 33%;height: 35vh;margin-top: 20px;}
+			.pic-3{width: 33%;height: 40vh;}
+			img{margin: 10px;}
+			}
+			.inner2{display: flex;
+				.pixy{width: 33%;height:40vh;margin-bottom:10px;display:block;}
+				.picy{margin-top: 12px;
+					.pic-4{width: 96%;height: 30vh;}
+				}
+				
+				.pic-5{width: 50%;height: 40vh;margin-top: 14px;}
+				img{margin: 10px;}
+			}
+		}
+
+		.donate{display: flex;height: 150vh;
+			.inner-pic{width: 58%;display:flex;padding-top: 12%;
+				.pix{display:block;margin: 5px;}
+				.picx{margin: 5px;}
+				.pic{display:block;margin: 5px;margin-top: 50px;}
+			
+			}
+			form{height: 500px;width: 500px;margin-top: 16%;margin-left: 30px;padding:20px;
+               h3{font-size:25px;padding-top: 30px;}
+				p{white-space: pre-line;font-size:18px;padding-top:20px;line-height: 1.2;}
+				h4{padding-top: 20px;}
+		h4::before {width: 60px;top: 55%;right: 77%;}
+				h4::after {width: 60px;top: 55%;left: 77%;}
+				label{padding: 30px;}
+			} 
+		} 
+
+		.events {padding-top: 5%;
+			.text{display: flex;justify-content:space-between;padding:0 10%;padding-top:100px;
+			.upcoming{
+				h2{text-align: left;padding: 10px;}
+				p{text-align: left;white-space: pre-line;padding-bottom: 10px;}
+			}
+			button{margin: 40px;
+				a{font-size: 18px;}
+			}
+			}
+		}
+
+
+
+
+		.footer-top {padding: 5%;position: absolute;bottom: -679%;z-index: 9;left: 9%;
+			form{
+				button {left: 78%;}}
+		}
+		.footer{position: relative;
+			.text-inner{width: 40%;padding-top: 40px;}
+			.follow{width: 30%;padding-top: 40px;}
+			.location{width: 30%;padding-top: 40px;}
+		}
+
+}

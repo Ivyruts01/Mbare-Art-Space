@@ -1,0 +1,65 @@
+
+//fonts
+
+$bold:'Montserrat3';
+$normal:'Montserrat5';
+$light:'Montserrat6';
+
+
+.header{display: flex; justify-content: space-between; padding: 5%; width: 100%; z-index: 1; font-family: $normal;
+    .logo{
+        h1{font-size: 18px;}
+    }
+    .menu{background-color:#FEB143; position: absolute; top: 10vh; width: 100%; left: -100vw; opacity: 0; transition: .4s ease; z-index: 2;z-index: 999;
+        .menu-item{padding: 15px 20px; list-style: none;
+            a{color: #707070; font-family: Arial, Helvetica, sans-serif;font-size: 20px;
+                &:hover{color: black;}
+            }
+            }
+        .btn{background-color: #7F8D5E;padding: 15px;color: white;padding: 10px;width: 50%;font-size: 20px;margin-top:5px;margin: 10px;}
+    }
+    .hamburger{height: 30px; width: 40px; display: flex; flex-direction: column; justify-content: center; z-index: 3;
+        .bar{height: 5px; width: 100%; background-color: #7F8D5E; border-radius: 5px;}
+        #top{transform: translateY(-4px); transition: all .6s ease;}
+        #middle{transition: all .6s ease;}
+        #bottom{transform: translateY(4px); transition: all .6s ease;}
+    }
+    .open{opacity: 1; left: 0;
+        .menu-item{
+            a{color: white;}
+        }
+        #top{transform: translateY(5px) rotate(135deg);}
+        #middle{opacity: 0; transform: rotate(360deg);}
+        #bottom{transform: translateY(-5px) rotate(-135deg);}
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {  
+    .header{
+       
+        .menu{top: 30vh;}
+
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    .header{
+        .menu{top: 10vh;}
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .header{padding: 0 5%; align-items: center;
+        .logo{margin: 20px 0; 
+        }
+        .menu{position: relative; top: 0; width: 100%; left: 0; opacity: 1; display: flex; border-radius: 6px; justify-content: flex-end; background-color: rgba(255, 0, 0, 0);
+            .menu-item{padding: 20px 10px; margin-right: 20px;
+                a{font-family: Arial, Helvetica, sans-serif; font-size: 15px; text-decoration: none;}
+            }
+        }
+        .hamburger{display: none;}
+    }
+}

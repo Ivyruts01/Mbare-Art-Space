@@ -1,0 +1,132 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  width: 100%;
+  z-index: 1;
+  font-family: "Montserrat5";
+}
+.header .logo h1 {
+  font-size: 18px;
+}
+.header .menu {
+  background-color: #FEB143;
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  left: -100vw;
+  opacity: 0;
+  transition: 0.4s ease;
+  z-index: 2;
+  z-index: 999;
+}
+.header .menu .menu-item {
+  padding: 15px 20px;
+  list-style: none;
+}
+.header .menu .menu-item a {
+  color: #707070;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.header .menu .menu-item a:hover {
+  color: black;
+}
+.header .menu .btn {
+  background-color: #7F8D5E;
+  padding: 15px;
+  color: white;
+  padding: 10px;
+  width: 50%;
+  font-size: 20px;
+  margin-top: 5px;
+  margin: 10px;
+}
+.header .hamburger {
+  height: 30px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+.header .hamburger .bar {
+  height: 5px;
+  width: 100%;
+  background-color: #7F8D5E;
+  border-radius: 5px;
+}
+.header .hamburger #top {
+  transform: translateY(-4px);
+  transition: all 0.6s ease;
+}
+.header .hamburger #middle {
+  transition: all 0.6s ease;
+}
+.header .hamburger #bottom {
+  transform: translateY(4px);
+  transition: all 0.6s ease;
+}
+.header .open {
+  opacity: 1;
+  left: 0;
+}
+.header .open .menu-item a {
+  color: white;
+}
+.header .open #top {
+  transform: translateY(5px) rotate(135deg);
+}
+.header .open #middle {
+  opacity: 0;
+  transform: rotate(360deg);
+}
+.header .open #bottom {
+  transform: translateY(-5px) rotate(-135deg);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) {
+  .header .menu {
+    top: 30vh;
+  }
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .header .menu {
+    top: 10vh;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .header {
+    padding: 0 5%;
+    align-items: center;
+  }
+  .header .logo {
+    margin: 20px 0;
+  }
+  .header .menu {
+    position: relative;
+    top: 0;
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    border-radius: 6px;
+    justify-content: flex-end;
+    background-color: rgba(255, 0, 0, 0);
+  }
+  .header .menu .menu-item {
+    padding: 20px 10px;
+    margin-right: 20px;
+  }
+  .header .menu .menu-item a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .header .hamburger {
+    display: none;
+  }
+}/*# sourceMappingURL=navigation.css.map */
